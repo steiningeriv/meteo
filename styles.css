@@ -5,6 +5,8 @@ body {
     font-size: 14px;
     color: #1d1d1d;
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+    @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,700,900');
+    @import url('https://fonts.googleapis.com/css?family=Krub:300,400,500,600,700,900');
 }
 
 .container {
@@ -28,6 +30,7 @@ nav {
 nav ul {
     line-height: 3em;
     font-size: 15px;
+    font-weight: 400;
     padding: 50px 0 0 0;
     list-style-type: none;
 }
@@ -98,7 +101,7 @@ nav ul a {
     grid-column: 2 / 2;
     grid-row: 2;
     height: auto;
-    margin: -0px 0px 20px 30px;
+    margin: 0px 0px 20px 30px;
 }
 
 .announcement {
@@ -108,7 +111,6 @@ nav ul a {
     border-width: 0px 0px 0px 7px;
     border-style: solid;
     padding: 5px 15px 5px 15px;
-    margin-top: 20px;
 }
 
 .announcement:hover {
@@ -121,6 +123,10 @@ nav ul a {
 
 .announcement-details {
     color: black;
+}
+
+.announcement h4 {
+    line-height: 1.5em;
 }
 
 /* Information */
@@ -155,6 +161,9 @@ nav ul a {
 
 #widget-background {
     padding: 0;
+    background-image: url(https://centre.weatherstem.com/skycamera/centre/beaverstadium/cumulus/snapshot.jpg);
+    background-size: cover;
+    background-position: bottom;
 }
 
 .weather-overview {
@@ -165,7 +174,7 @@ nav ul a {
     border-radius: 5px 0 0 5px;
     padding: 30px;
     color: white;
-    background-color: #2482EF;
+    background-color: rgba(36, 130, 239, .7);
     box-sizing: border-box;
     vertical-align: top;
 }
@@ -179,7 +188,6 @@ nav ul a {
     float: right;
     width: 120px;
     height: auto;
-
 }
 
 .weather-details {
@@ -190,9 +198,15 @@ nav ul a {
     vertical-align: top;
 }
 
+#weather-details-link {
+    color: white;
+}
+
 .weather-details ul {
     padding: 0 0 0 0;
     border-radius: 7px;
+    color: white;
+    text-shadow: 1px 1px 6px #afafaf;
     border-left: #2482EF 8px solid;
     padding: 5px 15px 5px;
     margin-top: 25px;
@@ -267,9 +281,9 @@ h5 {
 h6 {}
 
 p {
-    padding: 0;
     margin: 0;
     font-weight: 300;
+    line-height: 1.5em;
 }
 
 a:link {
@@ -285,12 +299,10 @@ a:visited {
 a:hover {
     text-decoration: none;
     cursor: pointer;
-    color: #1D407C;
     border-bottom: 3px solid #1D407C;
 }
 
-a:active {
-    color: #1D407C;
+.current {
     border-bottom: 3px solid #1D407C;
 }
 
@@ -316,10 +328,6 @@ a:active {
 
 /* Mobile Phone */
 @media only screen and (max-width: 599px) {
-    .container {
-        grid-template-rows: 165px 1fr 400px 100px;
-    }
-
 
     .container {
         grid-template-columns: 1fr;
@@ -330,13 +338,26 @@ a:active {
     nav {
         grid-column: 1;
         grid-row: 2/2;
-        background: none;
-        padding: 20px 0px 0px 20px;
-        border-bottom: 0 none;
-        height: 50px;
+        background: white;
+        padding: 0px 0px 10px 20px;
+        border-bottom: 0px none;
         box-shadow: none;
         overflow: auto;
         white-space: nowrap;
+    }
+
+    #fade {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 110px;
+        pointer-events: none;
+        border: 0;
+        background-image: linear-gradient(to right, rgba(246, 246, 246, 0), rgba(246, 246, 246, 1) 90%);
+        width: 20px;
+        height: 40px;
+
     }
 
     nav img {
@@ -347,38 +368,36 @@ a:active {
         line-height: 1em;
         font-size: 15px;
         padding: 0px;
+        text-align: center;
         list-style-type: none;
+        margin: 0px;
     }
 
     nav ul a {
-        padding: 5px 20px 5px 20px;
-        margin-left: 5px;
-        margin-right: 5px;
-        background: white;
-        border-radius: 90px;
+        padding: 1px 0px 1px 0px;
+        margin-left: 0px;
+        margin-right: 30px;
+        background: none;
+        border-radius: 0px;
     }
 
     nav ul a:hover {
         border: none;
-        background: #1D407C;
-        color: white;
+        border-bottom: 3px solid #1D407C;
     }
 
-    nav ul a:active {
-        border: none;
-        background: #1D407C;
-        color: white;
+    .current {
+        border-bottom: 3px solid #1D407C;
     }
-
 
     /* Header */
     .header {
         grid-column: 1;
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
         display: inline-block;
         background-image: none;
         background-size: cover;
-        background-color: #F6F6F6;
+        background-color: white;
         color: #1d1d1d;
         height: 50px;
         text-shadow: none;
@@ -422,7 +441,7 @@ a:active {
     .announcements {
         grid-column: 1;
         grid-row: 3;
-        margin: 20px 20px 0 20px;
+        margin: 30px 20px 0 20px;
     }
 
     /* Information */
@@ -459,6 +478,10 @@ a:active {
         margin-top: 0px;
     }
 
+    #precip {
+        font-size: 14px;
+    }
+
     /* Footer */
     .footer {
         grid-column: 1;
@@ -479,10 +502,10 @@ a:active {
         color: #1d1d1d;
         font-size: 25px;
         float: left;
-        margin-top: 15px;
+        margin-top: 14px;
         padding: 0;
     }
-    
+
     .card {
         padding: 20px;
     }
