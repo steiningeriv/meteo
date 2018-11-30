@@ -1,4 +1,3 @@
-from bs4 import BeautifulSoup as Soup
 """
 This python file is a helper to generate an html file for announcements.
 The announcements will be written to a file called announcements.html, included
@@ -34,10 +33,3 @@ print(announcement_html)
 
 f = open("announcement.html", "a")
 f.write(announcement_html)
-
-#See below the ruins of my attempts to automatically add the announcement html to the index.html file.
-#f = open("index.html", 'r')
-#soup = Soup(f.read(), 'html.parser')
-#div = soup.find(id="announcements card")
-#div.insert_after(announcement_html)
-#print(soup.prettify()

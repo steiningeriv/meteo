@@ -5,8 +5,6 @@ body {
     font-size: 14px;
     color: #1d1d1d;
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
-    @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,400,400i,500,700,900');
-    @import url('https://fonts.googleapis.com/css?family=Krub:300,400,500,600,700,900');
 }
 
 .container {
@@ -24,7 +22,11 @@ nav {
     padding: 50px 30px 50px 30px;
     border-bottom: 0 none;
     height: 100%;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.46);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#nav-img:hover {
+    border-bottom: 0px !important;
 }
 
 nav ul {
@@ -86,6 +88,8 @@ nav ul a {
 #temp {
     font-size: 40px;
     margin: 0;
+    float: left;
+    align-content: middle;
     line-height: 1em;
 }
 
@@ -110,7 +114,7 @@ nav ul a {
     max-width: 730px;
     border-width: 0px 0px 0px 7px;
     border-style: solid;
-    padding: 5px 15px 5px 15px;
+    padding: 5px 10px 5px 10px;
 }
 
 .announcement:hover {
@@ -134,6 +138,7 @@ nav ul a {
     grid-column: 3 / 5;
     grid-row: 2;
     height: auto;
+    max-height: 490px;
     max-width: 350px;
     margin: 0px 20px 20px 20px;
 }
@@ -171,10 +176,10 @@ nav ul a {
     width: 50%;
     min-width: 280px;
     height: 300px;
+    background-color: rgba(36, 130, 239, .8);
     border-radius: 5px 0 0 5px;
     padding: 30px;
     color: white;
-    background-color: rgba(36, 130, 239, .7);
     box-sizing: border-box;
     vertical-align: top;
 }
@@ -190,12 +195,26 @@ nav ul a {
     height: auto;
 }
 
+#weather-icon-small {
+    display: inline-block;
+    width: 40px;
+    margin-left: 5px;
+    align-content: middle;
+    height: auto;
+    float: right;
+}
+
 .weather-details {
     display: inline-block;
     width: 49%;
     padding: 30px;
     box-sizing: border-box;
     vertical-align: top;
+}
+
+#background-overlay {
+    background-color: rgba(36, 130, 239, .4);
+    border-radius: 5px;
 }
 
 #weather-details-link {
@@ -206,8 +225,7 @@ nav ul a {
     padding: 0 0 0 0;
     border-radius: 7px;
     color: white;
-    text-shadow: 1px 1px 6px #afafaf;
-    border-left: #2482EF 8px solid;
+    border-left: white 8px solid;
     padding: 5px 15px 5px;
     margin-top: 25px;
     list-style-type: none;
@@ -239,7 +257,7 @@ nav ul a {
     background: white;
     padding: 30px;
     border-bottom: 0 none;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -319,6 +337,14 @@ a:hover {
     padding-top: 5px;
 }
 
+.spacer-bottom {
+    padding-bottom: 15px;
+}
+
+.xtrasmall-spacer-bottom {
+    padding-bottom: 5px;
+}
+
 /* Xtra-Small Mobile Phone */
 @media only screen and (max-width: 413px) {
     .header .weather-snapshot {
@@ -340,7 +366,7 @@ a:hover {
         grid-row: 2/2;
         background: white;
         padding: 0px 0px 10px 20px;
-        border-bottom: 0px none;
+        border-bottom: 0px #d3d3d3 solid;
         box-shadow: none;
         overflow: auto;
         white-space: nowrap;
@@ -393,7 +419,7 @@ a:hover {
     /* Header */
     .header {
         grid-column: 1;
-        padding: 20px 20px 40px 20px;
+        padding: 20px 20px 20px 20px;
         display: inline-block;
         background-image: none;
         background-size: cover;
@@ -426,15 +452,25 @@ a:hover {
     .header #conditions {
         border: none;
         color: #1d1d1d;
+        display: inline-block;
         font-size: 13px;
         padding: 5px 0 5px 0px;
         vertical-align: middle;
         box-shadow: 0 0 px 0 rgba(0, 0, 0, 0.46);
     }
 
+    #weather-icon-small {
+        height: 27px;
+        width: auto;
+        margin-left: 5px;
+        filter: drop-shadow(0 0 5px #b7b7b7);
+        margin-top: -5px;
+    }
+
     .header #temp {
         font-size: 25px;
         margin-top: -5px;
+        display: inline-block;
     }
 
     /* Announcements */
@@ -502,7 +538,7 @@ a:hover {
         color: #1d1d1d;
         font-size: 25px;
         float: left;
-        margin-top: 14px;
+        margin-top: 8px;
         padding: 0;
     }
 

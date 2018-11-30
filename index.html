@@ -4,12 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="WeatherSTEM-api-key" content="ed1wra9a"> <!-- WeatherSTEM API Key: can be customized with personal account -->
+    <meta name="WeatherSTEM-station" content="centre/arboretum"> <!-- Target WeatherSTEM station -->
     <title>Meteorology 3</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <script src="scripts.js"></script>
     <script src="index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="api.min.js"></script>
 </head>
 
 <body class="container" onload="loadWeather()">
@@ -35,8 +39,9 @@
                 State College
             </div>
             <div id="conditions">
-                <h3 id="temp">63</h3>
-                <h3 id="precip">Partly Cloudy</h3>
+                <h3 id="temp"><span id="current-temp" data-sensor="Thermometer"></span></h3>
+                <h3 id="precip"></h3>
+                <img src="images/cloud.png" alt="Cloudy" id="weather-icon-small">
             </div>
         </div>
     </div>
@@ -44,14 +49,14 @@
     <!-- Announcements Card -->
     <div class="announcements card">
         <h2>Announcements</h2>
-            <div class="spacer">
-              <a href="">
+        <div class="spacer">
+            <a href="http://www.meteo.psu.edu/~syrett/Meteo3/Text/f18syl3.doc">
                 <div class="announcement">
-                  <h3 class="announcement-title">Test Announcement</h3>
-                  <h4 class="announcement-details">This is a test of the announcement.py backend tool. Remove before production.</h4>
+                    <h3 class="announcement-title">Test Announcement</h3>
+                    <h4 class="announcement-details">This is an example announcement.</h4>
                 </div>
-              </a>
-            </div>
+            </a>
+        </div>
 
         <!-- To generate announcement html automatically, run announcement.py in the Tools folder. -->
         <!-- A sample announcement post to show format -->
@@ -77,23 +82,43 @@
         <h3 class="spacer">Meteorology 3, Section 2</h3>
         <h4 class="spacer">Instructor | <span>Bill Syrett</span></h4>
         <p>wjs1@psu.edu<br>606C Walker Bldg.<br>Office Hours: Wed. 7-10 am & Appt.</p>
-        <h4 class="spacer">TA | <span>Kristina Rolph</span></h4>
+        <h4 class="spacer">TA | <span>Bob Smith</span></h4>
         <p>wjs1@psu.edu<br>606C Walker Bldg.<br>Office Hours: Wed. 7-10 am & Appt.</p>
         <h4 class="spacer">Lecture | <span>109 Walker Building</span></h4>
         <p>MWF 12:20 am-1:10 pm</p>
         <h4 class="spacer">Lab | <span>109 Walker Building</span></h4>
         <p>Wednesdays during regular class meeting time</p>
         <!-- add reference to syllabus location below -->
-        <p class="spacer"><a href="https://www.walmart.com">Download Syllabus</a></p>
+        <p class="spacer"><a href="http://www.meteo.psu.edu/~syrett/Meteo3/Text/f18syl3.doc">Download Syllabus</a></p>
     </div>
 
     <!-- State College Weather Card -->
     <div class="weather-widget card" id="widget-background">
-        <!-- This looks scary but it's a call to weatherwidget.io which will load a weather widget. -->
-        <a class="weatherwidget-io" href="https://forecast7.com/en/40d79n77d86/state-college/?unit=us" data-label_1="STATE COLLEGE" data-label_2="WEATHER" data-theme="original" >State College Weather</a>
-          <script>
-            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-          </script>
+        <div id="background-overlay">
+            <div class="weather-overview">
+                <h2>State College Weather</h2>
+                <h5>Powered by WeatherSTEM</h5>
+                <h3 class="spacer">Saturday, October 6</h3>
+                <div id="overview-data">
+                    <h3 id="temp" class="spacer"><span id="current-temp" data-sensor="Thermometer"></span>°</h3>
+                    <h3 id="precip">Cloudy</h3>
+                    <h3 id="precip" class="small-spacer">H <span hi-property></span> &nbsp L <span lo-property="lo-property"></span></h3>
+                </div>
+                <img src="images/cloud.png" alt="Cloudy" id="weather-icon">
+            </div>
+            <div class="weather-details">
+                <p style="text-align: right;"><a href="https://www.weatherstem.com" id="weather-details-link">Visit WeatherSTEM</a></p>
+                <ul>
+                    <li>Dewpoint: <span data-sensor="Dewpoint"></span>°F</li>
+                    <li>Heat Index: <span data-sensor="Heat Index"></span>°F</li>
+                    <li>Pressure: <span data-sensor="Barometer"></span> in Hg</li>
+                    <li>Today's Rainfall: <span data-sensor="Rain Gauge"></span> in</li>
+                    <li>Rainfall Rate: <span data-sensor="Rain Rate"></span> in/hr</li>
+                    <li>Wind Speed: <span data-sensor="Anemometer"></span> mph from <span data-sensor="Wind Vane"></span>°</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
     <!-- Footer -->
