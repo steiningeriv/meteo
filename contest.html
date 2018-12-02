@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="WeatherSTEM-api-key" content="ed1wra9a"> <!-- WeatherSTEM API Key: can be customized with personal account -->
+    <meta name="WeatherSTEM-station" content="centre/arboretum"> <!-- Target WeatherSTEM station -->
+    <title>Syllabus | Meteorology 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="weather.js"></script>
+    <script src="api.min.js"></script>
+</head>
+
+<body class="container-2" onload="loadWeather()">
+
+    <!--Left Panel Navigation-->
+    <nav>
+        <img src="images/psu_logo.png" alt="Penn State Logo" height="auto" width="70">
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="syllabus.html">Syllabus</a>
+            <a href="resources.html">Resources</a>
+            <a class="current" href="contest.html">Contest</a>
+        </ul>
+    </nav>
+
+    <!--Top Banner -->
+    <div class="header">
+        <img src="images/psu_logo.png" alt="Penn State Logo" height="auto" width="60">
+        <h1>Meteorology 3</h1>
+        <div class="weather-snapshot">
+            <div id="location">
+                State College
+            </div>
+            <div id="conditions">
+                <h3 id="temp"><span id="current-temp" data-sensor="Thermometer"></span>°</h3>
+                <h3 id="precip"></h3>
+                <img id="weather-icon-small" class="invert">
+            </div>
+        </div>
+    </div>
+
+    <div class="syllabus card">
+      <h2>Welcome to the weather forecasting contest page for Meteo 3.</h2>
+      <h3 class="spacer">A brief overview of the rules is included below.  If you have any problems, comments or
+suggestions, send them to me, please: <a href="mailto:wjs1@psu.edu">Bill Syrett (wjs1@psu.edu)</a>. <br>Thank you.  Happy forecasting!</h3> <br>
+      <h3 class="spacer">Forecasting Contest Rules and Information</h3>
+      <p>Forecasting begins after class on October 20 and ends on December 6, with a week off at Thanksgiving.</p>
+      <p>Practice period is done.</p>
+      <br>
+      <p>You will be entering a high temperature and low temperature forecast
+        for Tuesdays and Thursdays for State College (at the airport) by going
+        to the web site below and entering your username and password. Your
+        contest username is your Penn State "email" ID, like xyz1234
+        (don't add the @psu.edu) and your forecasting contest password is
+        "Meteo3" (without the quotes) followed immediately by the last 4 digits
+        of your PSU ID (on your card).<b>Your password is NOT the same one you
+          use on your PSU account (I can't know your password)!</b> If you lose
+          your card your ID number / contest password will not change to your new
+          number. You may use any forecasting aids you'd like, but the forecast
+          must be entered BEFORE 00z of that day. This means that a Tuesday forecast
+          will be due before Monday at 8pm (or 7pm when Daylight Saving Time ends)
+          and a Thursday forecast will be due before 8/7 pm Wednesdays. It is a
+          good idea to enter forecasts for the next two dates each time, so if
+          you forget the next one at least you'll get credit for a forecast. You
+          may enter as many times as you wish before the deadline- the final entry
+          will be used as your forecast. We will verify data by using observed
+          temperatures at the University Park Airport from midnight to midnight
+          local time. The forecaster with the most points will win the contest,
+          and one point is subtracted for each degree your forecast is off from
+          the observed high and low. The maximum lost points for a day is 20
+          (10 each for the high and the low). We will tabulate both the earned
+          points and the number of completed forecasts. Treat this as a 50-point
+          assignment. If you complete all forecasts you'll get full credit. If
+          you win the contest you'll get extra credit, as shown below. Good luck!
+        </p>
+      <h3 class="spacer">Scoring: How You Will Earn Extra Credit Points</h3>
+      <ul>
+        <li>4 points for each completed forecast, up to 50 points (12 forecasts)</li>
+        <li>20 additional points if final average score beats Syrett (8 forecast minimum)</li>
+        <li>30 additional points if final total score beats Syrett</li>
+        <li>First-place student receives 10 additional points, or 25 additional
+        points if they also win the contest</li>
+      </ul>
+    </div>
+    <div class="secondary-nav">
+      <ul>
+        <a href="http://w1.weather.gov/data/obhistory/KUNV.html">Conditions at University Park</a>
+        <a href="http://www.meteo.psu.edu/~syrett/Meteo3/Forecast/2015/weatherchallenge.php">Enter your forcast</a>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Copyright 2018 – Pennsylvania State University</h2>
+    </div>
+</body>
+</html>

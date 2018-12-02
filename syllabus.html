@@ -4,15 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="WeatherSTEM-api-key" content="ed1wra9a"> <!-- WeatherSTEM API Key: can be customized with personal account -->
+    <meta name="WeatherSTEM-station" content="centre/arboretum"> <!-- Target WeatherSTEM station -->
     <title>Syllabus | Meteorology 3</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="pages.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
     <script src="scripts.js"></script>
-    <script src="index.js"></script>
+    <script src="weather.js"></script>
+    <script src="api.min.js"></script>
 </head>
 
-<body class="container-2">
+<body class="container-2" onload="loadWeather()">
 
     <!--Left Panel Navigation-->
     <nav>
@@ -34,8 +38,9 @@
                 State College
             </div>
             <div id="conditions">
-                <h3 id="temp">63</h3>
-                <h3 id="precip">Cloudy</h3>
+                <h3 id="temp"><span id="current-temp" data-sensor="Thermometer"></span>°</h3>
+                <h3 id="precip"></h3>
+                <img id="weather-icon-small" class="invert">
             </div>
         </div>
     </div>
