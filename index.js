@@ -17,7 +17,7 @@ function loadWeather() {
           console.log(date.getMonth() + " " + date.getDay() + ", " + date.getYear());
           var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
           var months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-          document.getElementById("date").innerHTML = days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDay();
+          document.getElementById("date").innerHTML = days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDate();
 
           //Setting the weather widget
           document.getElementById("weather-icon").src = icon;
