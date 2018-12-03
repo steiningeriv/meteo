@@ -7,12 +7,10 @@ function loadWeather() {
           if (responseData.error) {
             return alert('An error was encountered: ' + responseData.error);
           }
-          var condition = responseData.weather[0].main;
+          //var condition = responseData.weather[0].main;
           var icon = "images/" + responseData.weather[0].icon + ".svg";
 
-          var fileName = location.pathname.split("/").slice(-1);
-
-          document.getElementById("precip").innerHTML = condition;
+          //document.getElementById("precip").innerHTML = condition;
           document.getElementById("weather-icon-small").src = icon;
         },
             error: function(responseData, textStatus, errorThrown) {
