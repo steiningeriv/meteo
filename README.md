@@ -3,7 +3,7 @@
 
 Welcome to the README file. This file has all of the information about the files for the updated website.
 For convenience and ease of use, this guide is separated by folder in the directory.
-For more detailed information, see the [Meteo 3 user guide](master/Final Deliverable.pdf).
+For more detailed information, see the Meteo 3 user guide.
 
 ## HTML, CSS, and JavaScript
 [HTML] (Hypertext Markup Language) is a markup language. It is used to create the "skeleton" of a webpage - that is, lay out the rough contents of the page and link to CSS for formatting and JavaScript for dynamic behavior.
@@ -39,7 +39,7 @@ This directory holds all of the images (including icons) used in the website.
 This directory holds all of the scripts (including JavaScript and one Python file).
 
 ### announcement.py
-This file enables the generation of announcement HTML, which can be inserted in the announcements card in index.html. See the [Guide](master/Final Deliverable.pdf) for more information.
+This file enables the generation of announcement HTML, which can be inserted in the announcements card in index.html. See the Guide for more information.
 
 ### api.min.js
 This file loads weather information from the [WeatherSTEM API](https://leon.weatherstem.com/api_docs).
