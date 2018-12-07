@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/psu_logo.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <script src="scripts.js"></script>
     <script src="index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
@@ -28,12 +27,11 @@
             <a href="resources.html">Resources</a>
             <a href="contest.html">Contest</a>
         </ul>
-
     </nav>
 
     <!--Top Banner -->
     <div class="header">
-        <img src="images/psu_logo.png" alt="Penn State Logo" height="auto" width="60">
+        <img src="images/psu_logo.png" alt="Penn State Logo" height="auto" width="50">
         <h1>Meteorology 3</h1>
         <div class="weather-snapshot">
             <div id="location">
@@ -41,7 +39,6 @@
             </div>
             <div id="conditions">
                 <h3 id="temp"><span id="current-temp" data-sensor="Thermometer"></span>°</h3>
-                <h3 id="precip"></h3>
                 <img id="weather-icon-small" class="invert">
             </div>
         </div>
@@ -50,11 +47,47 @@
     <!-- Announcements Card -->
     <div class="announcements card">
         <h2>Announcements</h2>
+
+        <!-- Create announcement post here -->
         <div class="spacer">
-            <a href="http://www.meteo.psu.edu/~syrett/Meteo3/Text/f18syl3.doc">
+            <a href="images/beaver-stadium.jpg">
                 <div class="announcement">
-                    <h3 class="announcement-title">Test Announcement</h3>
-                    <h4 class="announcement-details">This is an example announcement.</h4>
+                    <!-- Announcement title -->
+                    <h3 class="announcement-title">Final Exam: Thursday, December 13, 10:10-Noon, 22 Deike</h3>
+                </div>
+            </a>
+        </div>
+        <div class="spacer">
+            <a href="images/beaver-stadium.jpg">
+                <div class="announcement">
+                    <!-- Announcement title -->
+                    <h3 class="announcement-title">Quiz 7 Average = 89.4%</h3>
+                </div>
+            </a>
+        </div>
+        <div class="spacer">
+            <a href="images/cloud.png">
+                <div class="announcement">
+                    <h3 class="announcement-title">Lab 11 (chapters 16,18) (due 11/30): Notes Posted</h3>
+                    <h4 class="announcement-details">Labs are due Fridays at the beginning of class
+                        Labs received late, but before Monday's class lose 10 points (25%). No credit after then.</h4>
+                </div>
+            </a>
+        </div>
+        <div class="spacer">
+            <a href="images/cloud.png">
+                <div class="announcement">
+                    <h3 class="announcement-title">Lab 10 (chapter 16) (due 11/26): Notes Posted</h3>
+                    <h4 class="announcement-details">Labs are due Fridays at the beginning of class
+                        Labs received late, but before Monday's (11/26) class lose 10 points (25%). No credit after then.</h4>
+                </div>
+            </a>
+        </div>
+        <div class="spacer">
+            <a href="images/cloud.png">
+                <div class="announcement">
+                    <h3 class="announcement-title">Want more weather after graduation? Check out the Certificate Program</h3>
+                    <h4 class="announcement-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</h4>
                 </div>
             </a>
         </div>
@@ -102,7 +135,7 @@
                 <h3 class="spacer" id="date"></h3>
                 <div id="overview-data">
                     <h3 id="temp" class="spacer"><span id="current-temp" data-sensor="Thermometer"></span>°</h3><br>
-                    <h3 id="precip-widget">Cloudy</h3>
+                    <h3 id="precip-widget"></h3>
                     <h3 class="small-spacer">H <span hi-property></span> &nbsp L <span lo-property="lo-property"></span></h3>
                 </div>
                 <img id="weather-icon" class="invert">
@@ -127,4 +160,5 @@
         <h2>Copyright 2018 – Pennsylvania State University</h2>
     </div>
 </body>
+
 </html>
