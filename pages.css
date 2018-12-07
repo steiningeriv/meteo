@@ -3,6 +3,14 @@
     min-height: 100%;
     grid-template-columns: 130px 60% 20% 1fr;
     grid-template-rows: 165px 1fr 400px 100px;
+
+}
+
+.container-3 {
+    display: grid;
+    min-height: 100%;
+    grid-template-columns: 130px 50% 20% 1fr;
+    grid-template-rows: 165px 1fr 400px 100px;
 }
 
 .syllabus {
@@ -10,6 +18,11 @@
     grid-row: 2;
     height: auto;
     margin: 0px 20px 20px 30px;
+}
+
+.syllabus ul {
+    line-height: 2em;
+    font-weight: 300;
 }
 
 /* Resources */
@@ -22,6 +35,12 @@ table {
 td {
     text-align: left;
     padding: 10px;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    border-top: 1px solid white !important;
 }
 
 table a:hover {
@@ -53,6 +72,7 @@ table a:hover {
     border-bottom: none;
     float: right;
 }
+
 .download img {
     vertical-align: middle;
     height: 20px;
@@ -78,6 +98,8 @@ tr {
 
 tr:hover {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
     border-radius: 5px;
 }
 
@@ -85,6 +107,7 @@ tr:hover {
     grid-column: 3 / 3;
     grid-row: 2;
     height: 100%;
+    overflow-y: auto;
     margin: 100px 20px 20px 20px;
     max-width: 230px;
 }
@@ -149,6 +172,135 @@ p {
     line-height: 2em;
 }
 
+/* Contest */
+
+#forecast-prediction-form {
+    max-height: 455px;
+    margin-left: 0;
+}
+
+.collapsible {
+    display: none;
+}
+
+form label {
+    font-size: 14px;
+}
+
+#form {
+    max-width: 400px;
+    width: 100%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+    display: block;
+    border: solid 1px #E8E8E8;
+    background: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-size: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+    display: block;
+    border: solid 1px #E8E8E8;
+    background: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-size: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0 10px 0;
+    display: block;
+    border: solid 1px #E8E8E8;
+    border-radius: 5px;
+    background: none;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-size: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type=date] {
+    width: 100%;
+    max-width: 165px;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0 10px 0;
+    display: block;
+    border-radius: 5px;
+    border: solid 1px #E8E8E8;
+    background: none;
+    font-weight: 300;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#high {
+    width: 45%;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+#low {
+    width: 45%;
+    display: inline-block;
+    float: right;
+    margin-bottom: 25px;
+}
+
+input:focus {
+    background: white;
+    outline: none;
+    border-color: #1D407C;
+}
+
+input[type=submit] {
+    padding: 10px 20px 10px 20px;
+    width: auto;
+    float: right;
+    border-radius: 90px;
+    margin: -5px 0 10px 0;
+    display: block;
+    border: none;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    background: #1D407C;
+    color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type=submit]:hover {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+    background-color: #183567;
+    cursor: pointer;
+}
+
+
 /* Mobile Phone */
 @media only screen and (max-width: 599px) {
     .container {
@@ -156,6 +308,11 @@ p {
     }
 
     .container-2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .container-3 {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
@@ -169,7 +326,7 @@ p {
 
     #lessons {
         grid-row: 3;
-        margin-top : 30px;
+        margin-top: 30px;
     }
 
     /* Secondary Nav */
@@ -183,6 +340,43 @@ p {
         border-bottom: 0 none;
         padding: 15px 0 0 20px;
         box-shadow: none;
+    }
+
+    #forecast-prediction-form {
+        grid-row: 3;
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+
+    .collapsible {
+        background: none;
+        display: block;
+        border: none;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .collapsible span {
+        float: right;
+    }
+
+    #minus {
+        display: none;
+    }
+
+    #plus {
+        display: block;
+    }
+
+    .content {
+        display: none;
+        overflow: hidden;
+    }
+
+    .content h2 {
+        display: none;
     }
 
     #helpful-links-nav {
@@ -218,6 +412,11 @@ p {
         grid-template-rows: auto;
     }
 
+    .container-3 {
+        grid-template-columns: 130px 1fr;
+        grid-template-rows: auto;
+    }
+
     /* Syllabus */
     .syllabus {
         grid-column: 2 / 2;
@@ -239,6 +438,50 @@ p {
         white-space: nowrap;
         border-bottom: 0 none;
         box-shadow: none;
+    }
+
+    #forecast-prediction-form {
+        grid-row: 2;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .collapsible {
+        background: none;
+        display: block;
+        border: none;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        font-family: Open Sans, sans-serif;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .collapsible span {
+        float: right;
+        display: block;
+        font-size: 30px;
+        line-height: 0;
+        margin-top: 12px;
+    }
+
+    .content {
+        display: none;
+        overflow: hidden;
+    }
+
+    .content h2 {
+        display: none;
+    }
+
+    #minus {
+        display: none;
+    }
+
+    #plus {
+        display: block;
     }
 
     #helpful-links-nav {

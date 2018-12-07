@@ -12,9 +12,8 @@
     <link rel="icon" href="images/psu_logo.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
-    <script src="scripts.js"></script>
-    <script src="weather.js"></script>
-    <script src="api.min.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/api.min.js"></script>
 </head>
 
 <body class="container-2" onload="loadWeather()">
@@ -32,7 +31,7 @@
 
     <!--Top Banner -->
     <div class="header">
-        <img src="images/psu_logo.png" alt="Penn State Logo" height="auto" width="60">
+        <img src="images/psu_logo.png" alt="Penn State Logo" height="auto" width="50">
         <h1>Meteorology 3</h1>
         <div class="weather-snapshot">
             <div id="location">
@@ -40,7 +39,6 @@
             </div>
             <div id="conditions">
                 <h3 id="temp"><span id="current-temp" data-sensor="Thermometer"></span>°</h3>
-                <h3 id="precip"></h3>
                 <img id="weather-icon-small" class="invert">
             </div>
         </div>
@@ -92,7 +90,7 @@ suggestions, send them to me, please: <a href="mailto:wjs1@psu.edu">Bill Syrett 
     <div class="secondary-nav">
       <ul>
         <a href="http://w1.weather.gov/data/obhistory/KUNV.html">Conditions at University Park</a>
-        <a href="http://www.meteo.psu.edu/~syrett/Meteo3/Forecast/2015/weatherchallenge.php">Enter your forcast</a>
+        <a href="http://www.meteo.psu.edu/~syrett/Meteo3/Forecast/2015/weatherchallenge.php">Enter your Forcast</a>
       </ul>
     </div>
 

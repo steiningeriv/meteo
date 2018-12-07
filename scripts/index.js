@@ -14,7 +14,7 @@ function loadWeather() {
 
           //This section gets and formats the current date
           var date = new Date();
-          console.log(date.getMonth() + " " + date.getDay() + ", " + date.getYear());
+          //console.log(date.getMonth() + " " + date.getDay() + ", " + date.getYear());
           var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
           var months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
           document.getElementById("date").innerHTML = days[date.getDay()] + ", " + months[date.getMonth()] + " " + date.getDate();
@@ -24,7 +24,6 @@ function loadWeather() {
           document.getElementById("precip-widget").innerHTML = condition;
 
           //Setting the weather info at the top of the page
-          document.getElementById("precip").innerHTML = condition;
           document.getElementById("weather-icon-small").src = icon;
         },
             error: function(responseData, textStatus, errorThrown) {

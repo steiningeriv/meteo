@@ -12,16 +12,15 @@
     <link rel="icon" href="images/psu_logo.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
-    <script src="scripts.js"></script>
-    <script src="weather.js"></script>
-    <script src="api.min.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/api.min.js"></script>
 </head>
 
 <body class="container-2" onload="loadWeather()">
 
     <!--Left Panel Navigation-->
     <nav>
-        <a href="psu.instructure.com"><img src="images/psu_logo.png" alt="Penn State Logo" height="auto" width="70"></a>
+        <img src="images/psu_logo.png" alt="Penn State Logo" height="auto" width="70">
         <ul>
             <a href="index.html">Home</a>
             <a href="syllabus.html">Syllabus</a>
@@ -32,7 +31,7 @@
 
     <!--Top Banner -->
     <div class="header">
-        <img src="images/psu_logo.png" alt="Penn State Logo" height="auto" width="60">
+        <img src="images/psu_logo.png" alt="Penn State Logo" height="auto" width="50">
         <h1>Meteorology 3</h1>
         <div class="weather-snapshot">
             <div id="location">
@@ -40,11 +39,11 @@
             </div>
             <div id="conditions">
                 <h3 id="temp"><span id="current-temp" data-sensor="Thermometer"></span>°</h3>
-                <h3 id="precip"></h3>
                 <img id="weather-icon-small" class="invert">
             </div>
         </div>
     </div>
+
 
     <!-- Modules Card -->
     <div class="syllabus card" id="lessons">
@@ -114,7 +113,7 @@
                     <a href="http://www.meteo.psu.edu/~wjs1/Meteo3/PowerPoint/MoistureCloudsRain.pptx"><img src="images/download.png" alt="Download" title="Download"></a>
                 </td>
             </tr>
-             <tr>
+            <tr>
                 <td class="module">
                     <a><img src="images/beaker.png" alt="Lab">Lab 3</a>
                 </td>
@@ -130,7 +129,7 @@
                     <a href="http://www.meteo.psu.edu/~wjs1/Meteo3/PowerPoint/PressureBasics.pptx"><img src="images/download.png" alt="Download" title="Download"></a>
                 </td>
             </tr>
-             <tr>
+            <tr>
                 <td class="module">
                     <a><img src="images/lesson.png" alt="Lesson">The Wind</a>
                 </td>
@@ -146,7 +145,7 @@
                     <a href="http://www.meteo.psu.edu/~wjs1/Meteo3/PowerPoint/2018Lab4.pptx"><img src="images/download.png" alt="Download" title="Download"></a>
                 </td>
             </tr>
-             <tr>
+            <tr>
                 <td class="module">
                     <a><img src="images/lesson.png" alt="Lesson">Atmospheric Stability</a>
                 </td>
@@ -312,26 +311,66 @@
         <!--The old web lecture outlines were linked here-->
         <h2>Old Web Lecture Outlines</h2>
         <table>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/basics.htm">1. Some Basics</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/radiation.htm">2. Radiation</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/satellite.htm">3. Satellite Images, Radiation and Temperature</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/temperature.htm">4. Temperature</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/moisture.htm">5. Moisture, Humidity and Cloud Formation</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/midlatjet.htm">6. The Mid-Latitude Jet Stream, Fronts, Air Masses</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/pressure.htm">7. Pressure</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/wind.htm">8. The Wind</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/stability.htm">9. Atmospheric Stability</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/tstorm.htm">10. Non-severe Thunderstorms</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/tstormdanger.htm">11. Thunderstorm Dangers</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/generalcirc.htm">12. General Circulation - Mid and High Latitudes</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/tropicscirc.htm">13. General Circulation - Tropics</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/hurricanes.htm">14. Hurricanes</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/fronts.htm">15. Fronts and Cyclogenesis</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/tornado.htm">16. Tornadoes</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/winterwx.htm">17. Winter Weather</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/landuse.htm">18. Land Use</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/ozone.htm">19. Ozone</a></td></tr>
-            <tr><td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/globalwarm.htm">20. Global Warming</a></td></tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/basics.htm">1. Some Basics</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/radiation.htm">2. Radiation</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/satellite.htm">3. Satellite Images, Radiation and Temperature</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/temperature.htm">4. Temperature</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/moisture.htm">5. Moisture, Humidity and Cloud Formation</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/midlatjet.htm">6. The Mid-Latitude Jet Stream, Fronts, Air Masses</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/pressure.htm">7. Pressure</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/wind.htm">8. The Wind</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/stability.htm">9. Atmospheric Stability</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/tstorm.htm">10. Non-severe Thunderstorms</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/tstormdanger.htm">11. Thunderstorm Dangers</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/generalcirc.htm">12. General Circulation - Mid and High Latitudes</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/tropicscirc.htm">13. General Circulation - Tropics</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/hurricanes.htm">14. Hurricanes</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/fronts.htm">15. Fronts and Cyclogenesis</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/tornado.htm">16. Tornadoes</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/winterwx.htm">17. Winter Weather</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/landuse.htm">18. Land Use</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/ozone.htm">19. Ozone</a></td>
+            </tr>
+            <tr>
+                <td><a href="http://www.meteo.psu.edu/~wjs1/Meteo3/Html/globalwarm.htm">20. Global Warming</a></td>
+            </tr>
         </table>
     </div>
 
